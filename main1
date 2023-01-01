@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void task_1();
+
+
+int main()
+{
+  float sum=0;
+    int N = -1, a = 0;
+    printf("Enter N(N>=1):");
+    while(N<1)
+    {
+        scanf("%d",&N);
+    }
+    printf("Enter a(a>=0):");
+    while (a<=0)
+    {
+        scanf("%d",&a);
+    }
+
+    for(int i=0;i<=N;i++)
+    {
+        int var=1;
+        float temp=1;
+        if(i%2!=0)
+        {
+            temp=-1;
+        }
+        for(int j=1;j<=2*i+1;j++)
+        {
+            var=var*j;
+            temp=temp*a;
+        }
+        temp=temp/var;
+        sum+=temp;
+    }
+    printf("%f",sum);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
